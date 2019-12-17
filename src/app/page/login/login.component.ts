@@ -25,10 +25,9 @@ export class LoginComponent {
   ) {
     log.construct(this.constructor.name);
     this.form = builder.group({
-      username: builder.control('manager', Validators.required),
-      password: builder.control('null', Validators.required)
+      username: builder.control(null, Validators.required),
+      password: builder.control(null, Validators.required)
     });
-    //this.onSubmit();
   }
 
   onSubmit() {

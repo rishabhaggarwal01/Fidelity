@@ -24,9 +24,7 @@ export class ChefDashboardComponent implements OnDestroy, OnInit {
     private route: ActivatedRoute
   ) {
     log.construct();
-    // this.mockData = this.chefDashboard.readData();
     this.route.data.subscribe((data: { chefDashboard: any }) => {
-      console.log(JSON.stringify(data.chefDashboard) + ' Resolver')
       this.mockData = data.chefDashboard;
     });
   }

@@ -25,7 +25,6 @@ export class DashboardComponent implements OnDestroy, OnInit {
 
   ngOnInit() {
     this.route.data.subscribe((data: { dashboard: any }) => {
-      console.log(JSON.stringify(data.dashboard) + ' Resolver')
       this.mockData = data.dashboard;
     });
   }
