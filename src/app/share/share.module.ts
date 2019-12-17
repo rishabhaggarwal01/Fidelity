@@ -7,7 +7,6 @@ import {WrapDirective} from '@app/share/wrap.directive';
 import {MarginDirective} from '@app/share/margin.directive';
 import {TimestampPipe} from '@app/share/timestamp.pipe';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
-import {AuthInterceptor} from '@app/share/auth-interceptor.service';
 import {AppDateAdapter} from '@app/share/share.model';
 import {CommonModule} from '@angular/common';
 import {CoreModule} from '@app/core/core.module';
@@ -39,7 +38,6 @@ import {StretchDirective} from '@app/share/stretch.directive';
     TimestampPipe
   ],
   providers: [
-    {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true},
     {provide: DateAdapter, useClass: AppDateAdapter}
   ]
 })

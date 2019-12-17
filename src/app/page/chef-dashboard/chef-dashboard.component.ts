@@ -5,7 +5,7 @@ import { Subscription } from 'rxjs';
 import { SnackService } from '@app/custom/snack/snack.service';
 import { ChefDashboardService } from './chef-dashboard.service';
 import { HttpClient } from '@angular/common/http';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   templateUrl: './chef-dashboard.component.html',
@@ -20,10 +20,15 @@ export class ChefDashboardComponent implements OnDestroy, OnInit {
     private core: CoreService,
     private chefDashboard: ChefDashboardService,
     private http: HttpClient,
-    private router: Router
+    private router: Router,
+    private route: ActivatedRoute
   ) {
     log.construct();
-    this.mockData = this.chefDashboard.readData();
+    // this.mockData = this.chefDashboard.readData();
+    this.route.data.subscribe((data: { chefDashboard: any }) => {
+      console.log(JSON.stringify(data.chefDashboard) + ' Resolver')
+      this.mockData = data.chefDashboard;
+    });
   }
 
   ngOnInit() {

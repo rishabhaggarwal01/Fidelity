@@ -3,24 +3,18 @@ import { ChefDashboardRoutingModule } from './chef-dashboard-routing.module';
 import { ChefDashboardComponent } from './chef-dashboard.component';
 import { LogService } from '@app/core/log.service';
 import { ShareModule } from '@app/share/share.module';
-import { LoadModule } from '@app/custom/load/load.module';
-import { DialogModule } from '@app/custom/dialog/dialog.module';
-import { ReadModule } from '@app/custom/read/read.module';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { ChefDashboardService } from './chef-dashboard.service';
 import { MatCardModule } from '@angular/material/card';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatInputModule } from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
-
+import { ChefDashboardResolverService } from './chef-dashboard-resolver.service';
 
 @NgModule({
   imports: [
     ShareModule,
     ChefDashboardRoutingModule,
-    LoadModule,
-    DialogModule,
-    ReadModule,
     MatToolbarModule,
     MatCardModule,
     MatTooltipModule,
@@ -28,7 +22,7 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule
   ],
   declarations: [ChefDashboardComponent],
-  providers: [ChefDashboardService]
+  providers: [ChefDashboardService, ChefDashboardResolverService]
 })
 export class ChefDashboardModule {
   constructor(private log: LogService) {

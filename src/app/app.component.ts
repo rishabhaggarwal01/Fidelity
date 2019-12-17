@@ -3,7 +3,6 @@ import { MatSidenav } from '@angular/material/sidenav';
 import { LogService } from '@app/core/log.service';
 import { ActivatedRoute, NavigationStart, Router } from '@angular/router';
 import { CoreService } from '@app/core/core.service';
-import { SpinService } from '@app/custom/spin/spin.service';
 import { OverlayContainer, OverlayRef } from '@angular/cdk/overlay';
 
 @Component({
@@ -19,7 +18,6 @@ export class AppComponent {
     private log: LogService,
     public router: Router,
     public core: CoreService,
-    private spin: SpinService,
     public overlay: OverlayContainer,
     private activated: ActivatedRoute
   ) {
@@ -28,7 +26,7 @@ export class AppComponent {
     let ref: OverlayRef;
     router.events.subscribe(event => {
       if (event instanceof NavigationStart) {
-        return ref = this.spin.ref();
+        return ref;
       }
       return ref && ref.dispose();
     });

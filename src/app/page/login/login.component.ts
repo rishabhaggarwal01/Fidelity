@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { LogService } from '@app/core/log.service';
-import { SpinService } from '@app/custom/spin/spin.service';
 import { SnackService } from '@app/custom/snack/snack.service';
 import { CoreService } from '@app/core/core.service';
 import { Router } from '@angular/router';
@@ -26,9 +25,10 @@ export class LoginComponent {
   ) {
     log.construct(this.constructor.name);
     this.form = builder.group({
-      username: builder.control(null, Validators.required),
-      password: builder.control(null, Validators.required)
+      username: builder.control('manager', Validators.required),
+      password: builder.control('null', Validators.required)
     });
+    //this.onSubmit();
   }
 
   onSubmit() {

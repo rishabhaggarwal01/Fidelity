@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { CoreModule } from '@app/core/core.module';
-import { LinkComponent } from '@app/custom/link/link.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from '@app/app-routing.module';
@@ -18,7 +17,7 @@ import { HttpModule } from '@angular/http';
     MatTooltipModule,
     HttpModule
   ],
-  declarations: [AppComponent, LinkComponent],
+  declarations: [AppComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule {

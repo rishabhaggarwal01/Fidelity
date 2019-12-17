@@ -3,7 +3,7 @@ import { CoreService } from '@app/core/core.service';
 import { LogService } from '@app/core/log.service';
 import { DashboardService } from './dashboard.service';
 import { HttpClient } from '@angular/common/http';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   templateUrl: './dashboard.component.html',
@@ -17,13 +17,17 @@ export class DashboardComponent implements OnDestroy, OnInit {
     private core: CoreService,
     private dashboard: DashboardService,
     private http: HttpClient,
-    private router: Router
+    private router: Router,
+    private route: ActivatedRoute
   ) {
     log.construct();
   }
 
   ngOnInit() {
-    this.mockData = this.dashboard.readData();
+    this.route.data.subscribe((data: { dashboard: any }) => {
+      console.log(JSON.stringify(data.dashboard) + ' Resolver')
+      this.mockData = data.dashboard;
+    });
   }
   
   ngOnDestroy(): void {
