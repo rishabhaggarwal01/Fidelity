@@ -1,0 +1,10 @@
+{
+  "/shared/api": {
+    "target": "http://192.168.5.122:8001",
+    "secure": false
+  },
+  "/beneficiary/api": {
+    "target": "http://192.168.5.122:8001",
+    "secure": false
+  }
+}

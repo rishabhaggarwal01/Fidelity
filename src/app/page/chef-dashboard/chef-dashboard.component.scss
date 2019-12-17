@@ -1,0 +1,33 @@
+ .applicationMarginTop {
+     margin-top:4%
+ }
+
+ .requestTable {
+  border:1px solid lightgray;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.rowColor:nth-child(even) {
+  background-color:#FFF0D3;
+  }
+
+.rowWidth {
+  height: 2.5vw;
+}
+
+.column {
+  width:30%;
+}
+
+.sufficientQty {
+ color: green;
+}
+
+.insufficientQty {
+  color: red
+}
+
+.marginLeft {
+margin-left: 2%;
+}

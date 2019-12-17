@@ -1,0 +1,10 @@
+<mat-toolbar *ngIf="core.user" class="mat-elevation-z2" [style.z-index]="2" style="background-color: darkorange">
+  <img style="width:5%" mat-card-avatar src="assets/logo.png">&nbsp;&nbsp;
+  DynaEats
+  <span [style.flex-grow]="1"></span>
+  <button mat-button (click)="onLogout()">
+    <mat-icon matTooltip="Logout">power_settings_new</mat-icon>
+  </button>
+  
+</mat-toolbar>
+<router-outlet></router-outlet>
