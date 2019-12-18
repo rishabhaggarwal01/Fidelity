@@ -12,7 +12,7 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./chef-dashboard.component.scss', '../../app.component.scss']
 })
 export class ChefDashboardComponent implements OnDestroy, OnInit {
-  headElements = ['Items', 'Quantity Available'];
+  headElements = ['Items', 'Category', 'Quantity Available'];
   mockData: any;
   cuisine: string;
   constructor(

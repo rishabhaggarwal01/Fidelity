@@ -8,6 +8,7 @@
     </thead>
     <tr class="rowColor" *ngFor="let data of mockData">
         <td class="rowWidth">{{data['name']}}</td>
+        <td class="rowWidth">{{data['category']}}</td>
         <td class="rowWidth">{{data['qtyAvailable']}} {{data['name'] === 'Olive' || data['name'] === 'Mustard' ? 'Ltr' : 'Kg'}}</td>
     </tr>
 </table><br/><br/>

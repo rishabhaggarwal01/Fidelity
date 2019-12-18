@@ -10,7 +10,7 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./dashboard.component.scss', '../../app.component.scss']
 })
 export class DashboardComponent implements OnDestroy, OnInit {
-  headElements = ['Items', 'Required Qty', 'Vendor1', 'Vendor2', 'Received Qty', 'Status', 'Bakery', 'Italian', 'Indian'];
+  headElements = ['Items', 'Category', 'Required Qty', 'Vendor1', 'Vendor2', 'Received Qty', 'Status', 'Bakery', 'Italian', 'Indian'];
   mockData;
   constructor(
     private log: LogService,

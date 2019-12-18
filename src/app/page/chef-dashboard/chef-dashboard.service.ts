@@ -8,35 +8,35 @@ import { CoreService } from '@app/core/core.service';
 @Injectable()
 export class ChefDashboardService implements OnDestroy {
   mockDataIndianFood = [
-    { name: 'Wheat', qtyAvailable: 20 },
-    { name: 'Rice', qtyAvailable: 10 },
-    { name: 'Mustard', qtyAvailable: 5 },
-    { name: 'Vegetable', qtyAvailable: 20 },
-    { name: 'Onions', qtyAvailable: 15 },
-    { name: 'Capsicum', qtyAvailable: 10 },
-    { name: 'Salt', qtyAvailable: 5 },
-    { name: 'Sugar', qtyAvailable: 10 }
+    { name: 'Wheat', category: 'Flour', qtyAvailable: 20 },
+    { name: 'Rice', category: 'Flour', qtyAvailable: 10 },
+    { name: 'Mustard', category: 'Fats', qtyAvailable: 5 },
+    { name: 'Vegetable', category: 'Fats', qtyAvailable: 20 },
+    { name: 'Onions', category: 'Vegetables', qtyAvailable: 15 },
+    { name: 'Capsicum', category: 'Vegetables', qtyAvailable: 10 },
+    { name: 'Salt', category: 'Add-Ons', qtyAvailable: 5 },
+    { name: 'Sugar', category: 'Add-Ons', qtyAvailable: 10 }
   ]
 
   mockDataItalianFood = [
-    { name: 'Wheat', qtyAvailable: 20 },
-    { name: 'Rice', qtyAvailable: 10 },
-    { name: 'Multigrain', qtyAvailable: 5 },
-    { name: 'Butter', qtyAvailable: 20 },
-    { name: 'Olive', qtyAvailable: 15 },
-    { name: 'Capsicum', qtyAvailable: 10 },
-    { name: 'Mushroom', qtyAvailable: 5 },
-    { name: 'Baby Corns', qtyAvailable: 10 },
-    { name: 'Onions', qtyAvailable: 10 },
-    { name: 'Salt', qtyAvailable: 10 }
+    { name: 'Wheat', category: 'Flour', qtyAvailable: 20 },
+    { name: 'Rice', category: 'Flour', qtyAvailable: 10 },
+    { name: 'Multigrain', category: 'Flour', qtyAvailable: 5 },
+    { name: 'Butter', category: 'Fats', qtyAvailable: 20 },
+    { name: 'Olive', category: 'Fats', qtyAvailable: 15 },
+    { name: 'Capsicum', category: 'Vegetables', qtyAvailable: 10 },
+    { name: 'Mushroom', category: 'Vegetables', qtyAvailable: 5 },
+    { name: 'Baby Corns', category: 'Vegetables', qtyAvailable: 10 },
+    { name: 'Onions', category: 'Add-Ons', qtyAvailable: 10 },
+    { name: 'Salt', category: 'Add-Ons', qtyAvailable: 10 }
   ]
 
   mockDatabakeryFood = [
-    { name: 'Butter', qtyAvailable: 20 },
-    { name: 'Olive', qtyAvailable: 10 },
-    { name: 'Olives', qtyAvailable: 5 },
-    { name: 'Sugar', qtyAvailable: 20 },
-    { name: 'Vanilla', qtyAvailable: 15 }
+    { name: 'Butter', category: 'Fats', qtyAvailable: 20 },
+    { name: 'Olive', category: 'Fats', qtyAvailable: 10 },
+    { name: 'Olives', category: 'Add-Ons', qtyAvailable: 5 },
+    { name: 'Sugar', category: 'Add-Ons', qtyAvailable: 20 },
+    { name: 'Vanilla', category: 'Add-Ons', qtyAvailable: 15 }
   ]
   constructor(
     private log: LogService,

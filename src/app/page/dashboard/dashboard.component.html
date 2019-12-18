@@ -8,6 +8,7 @@
     </thead>
     <tr class="rowColor" *ngFor="let data of mockData">
         <td class="rowWidth">{{data['name']}}</td>
+        <td class="rowWidth">{{data['category']}}</td>
         <td class="rowWidth">{{data['qtyReqd']}} {{data['name'] === 'Olive' || data['name'] === 'Mustard' ? 'Ltr' : 'Kg'}}</td>
         <td class="rowWidth"><input [(ngModel)]="data['v1qty']" type='number' value="{{data['v1qty']}}"/></td>
         <td class="rowWidth"><input [(ngModel)]="data['v2qty']" type='number' value="{{data['v2qty']}}"/></td>
@@ -17,16 +18,4 @@
         <td class="rowWidth" [class.sufficientQty]="data['Italian'] === 'Y'" [class.insufficientQty]="data['Italian'] === 'N'">{{data['Italian']}}</td>
         <td class="rowWidth" [class.sufficientQty]="data['Indian'] === 'Y'" [class.insufficientQty]="data['Indian'] === 'N'">{{data['Indian']}}</td>
     </tr>
-    <!--[ngClass]="{sufficientQty: data['Italian'] ==='Y'}"-->
 </table><br/><br/>
-<!--<tr class="rowColor">
-        <td class="rowWidth">Wheat</td>
-        <td class="rowWidth">{{qtyReqd['wheat']}}</td>
-        <td class="rowWidth"><input [(ngModel)]="data['vendor1']['wheat']" type='number' value="{{data['vendor1']['wheat']}}" /></td>
-        <td class="rowWidth"><input [(ngModel)]="data['vendor2']['wheat']" type='number' value="{{data['vendor2']['wheat']}}" /></td>
-        <td class="rowWidth">{{data['vendor1']['wheat'] + data['vendor2']['wheat']}} </td>
-        <td class="rowWidth">{{data['vendor1']['wheat'] + data['vendor2']['wheat'] >= qtyReqd['wheat'] ? 'OK' : 'Insuffucient'}}</td>
-        <td class="rowWidth">N</td>
-        <td class="rowWidth">Y</td>
-        <td class="rowWidth">Y</td>
-    </tr>-->
